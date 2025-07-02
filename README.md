@@ -5,7 +5,7 @@
 2. Initialize repo:
 
 ```
-repo init -u https://android.googlesource.com/kernel/manifest -b common-android-mainline
+repo init -u https://android.googlesource.com/kernel/manifest -b common-android16-6.12-lts
 curl -o .repo/local_manifests/manifest_rk_opi.xml -L https://raw.githubusercontent.com/dvab-sarma/android_kernel_manifest/android-16.0/manifest_rk_opi.xml --create-dirs
 ```
 3. Sync source code:
