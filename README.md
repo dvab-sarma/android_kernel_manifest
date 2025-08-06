@@ -25,9 +25,25 @@ Orange Pi 5 pro:
 tools/bazel build --config=fast --config=stamp //common:opi5_pro
 ```
 
-Compiled kernel Image, dtb can be found in `bazel-bin/common/opi5/arch/arm64/boot` or `bazel-bin/common/opi5_pro/arch/arm64/boot` directory.
+Orange Pi 3B:
+```
+tools/bazel build --config=fast --config=stamp //common:opi3b
+```
 
-Replace existing files in `device/opi/opi5_pro-kernel` directory of the Android source tree to include them in Android 16 build. You can also replace existing files in the boot partition of the Orange Pi 5 pro Android 16 image.
+Compiled kernel Image, dtb can be found in -
+
+for opi 5 -
+`bazel-bin/common/opi5/arch/arm64/boot` 
+
+for opi 5 pro - 
+`bazel-bin/common/opi5_pro/arch/arm64/boot`
+
+for opi 3b - 
+`bazel-bin/common/opi3b/arch/arm64/boot`
+
+directory.
+
+Replace existing files in `device/opi/opi5_pro-kernel` or for opi 3b `device/opi/opi3b-kernel` directory of the Android source tree to include them in Android 16 build. You can also replace existing files in the boot partition of the Orange Pi 5 pro or Orange Pi 3b Android 16 image .
 
 If you want autoboot for Orange Pi 5 only build (the easy way: which is not generating bootscr.cmd from ground up), Just rename the dtb of Orange Pi 5 dtb(`rk3588s-orangepi-5.dtb`) to Orange Pi 5 Pro dtb name (`rk3588s-orangepi-5-pro-1.dtb`) and copy it into the boot patition of the image or into the   `device/opi/opi5_pro-kernel`.
 
